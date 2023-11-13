@@ -12,7 +12,6 @@
 .gameField {
   display: flex;
   flex-wrap: wrap;
-
   height: 600px;
   width: 722px;
   border: 1px solid black;
@@ -32,12 +31,4 @@
 .elementField:hover {
   background-color: lightgray;
   border: 2px solid black;
-}
-
-.greyColor {
-  /* background-color:  */
-}
-
-.kik:hover {
-  z-index: -10;
 }

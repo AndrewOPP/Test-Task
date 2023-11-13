@@ -8,7 +8,7 @@ export function createMarkUp() {
       const { id, svg } = randomEl();
       markup.push(`
         <div id=${id} class="elementField">
-            <svg class="kik" width="60px" height="60px">
+            <svg class="svgIcons" width="60px" height="60px">
                 <use href="./sprite.svg#${svg}"></use>
             </svg>
         </div>`);
@@ -45,6 +45,7 @@ function randomEl() {
       id = 0;
       break;
   }
+
   return {
     svg: svg,
     id: id,
