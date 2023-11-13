@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameField {
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 600px;
+  width: 722px;
+  border: 1px solid black;
+}
+
+.elementField {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border: 1px solid black;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.elementField:hover {
+  background-color: lightgray;
+  border: 2px solid black;
+}
+
+.greyColor {
+  /* background-color:  */
+}
+
+.kik:hover {
+  z-index: -10;
+}
