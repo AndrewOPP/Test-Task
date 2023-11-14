@@ -12,7 +12,7 @@
 .gameField {
   display: flex;
   flex-wrap: wrap;
-  height: 600px;
+  height: 840px;
   width: 722px;
   border: 1px solid black;
 }
