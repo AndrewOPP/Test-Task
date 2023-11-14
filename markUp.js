@@ -3,6 +3,7 @@ class GameFieldMarkup {
     this.gameField = document.querySelector(".gameField");
   }
 
+  // Метод для создания разметки
   createMarkup() {
     let mainMarkup = [];
     const createMark = () => {
@@ -23,6 +24,7 @@ class GameFieldMarkup {
     this.gameField.insertAdjacentHTML("beforeend", mainMarkup);
   }
 
+  // Метод для случайной генерации игровых ячеек
   randomEl() {
     let svgIcon;
     let id;

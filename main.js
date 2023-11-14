@@ -3,16 +3,16 @@ import { gameMarkUp } from "./markUp.js";
 class Game {
   constructor() {
     this.gameField = document.querySelector(".gameField");
-    this.allFieldArr = [...this.gameField.children];
+    this.allFieldArr = [...this.gameField.children]; // Массив всех игровых ячеек
     this.NumberOfLine = Math.floor(
-      this.gameField.offsetWidth / this.allFieldArr[0].offsetWidth
+      this.gameField.offsetWidth / this.allFieldArr[0].offsetWidth // Находим количество игровых ячеек в ряду
     );
     this.gameField.addEventListener(
       "click",
       this.fieldsWhichIsSelected.bind(this)
     );
   }
-
+  // Основной метод
   fieldsWhichIsSelected(e) {
     const element = e.target.closest("div");
     if (!element || element.classList.contains("gameField")) return;
@@ -26,10 +26,12 @@ class Game {
     element.textContent = "";
   }
 
+  // Метод для обозначения конкретной соседней игровой ячейки
   findClosestElems(elemIndex) {
     return this.allFieldArr[elemIndex];
   }
 
+  //Метод для проверки конкретной соседней игровой ячейки
   changeClosestElems(element, elementTextContent) {
     if (
       element &&
@@ -46,6 +48,7 @@ class Game {
     }
   }
 
+  // Метод для проверки соседних игровых ячеек
   isCloseElementEqual(elementIndex, textContent, element) {
     const aboveElem = this.findClosestElems(elementIndex + this.NumberOfLine);
     const botElem = this.findClosestElems(elementIndex - this.NumberOfLine);
